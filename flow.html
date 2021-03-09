@@ -5,8 +5,475 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./flow.css">
+  <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.1.12/dist/g6.min.js"></script>
 </head>
 <body>
+  <div id="mountNode"></div>
   <div>test9999</div>
+  <script>
+    const frameWorkData = {"id":"root","label":"北京北京北京有限公司","nodeType":"root","children":[{"id":"市财政0","label":"市财政","proportion":"33","nodeType":"investment","children":[]},{"id":"市财政1","label":"市财政","proportion":"22","nodeType":"investment","children":[]},{"id":"海河2","label":"海河","proportion":"43","nodeType":"investment","children":[]},{"id":"地产0","label":"地产","nodeType":"bigIcon","children":[{"id":"开发建设00.17373662539371804","label":"开发建设","nodeType":"hexagon","children":[{"id":"金越0","label":"金越","nodeType":"subsidiary","subType":"stake","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":"91120116697439012R"},{"id":"金鸿1","label":"金鸿","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"金信2","label":"金信","nodeType":"subsidiary","subType":"stake","income":"10157.43","ssqyshxydm":"911201166818665545","tyshxydm":"911201166906610323"},{"id":"金霄3","label":"金霄","nodeType":"subsidiary","subType":"stake","income":"6.95","ssqyshxydm":"911201166818665545","tyshxydm":"91120116697438896L"},{"id":"金风4","label":"金风","nodeType":"subsidiary","subType":"stake","income":"2243.82","ssqyshxydm":"911201166818665545","tyshxydm":"91120116690681041G"},{"id":"中冶名金5","label":"中冶名金","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"金元6","label":"金元","nodeType":"subsidiary","subType":"stake","income":"2262.06","ssqyshxydm":"911201166818665545","tyshxydm":"91120116690661008J"},{"id":"金朝7","label":"金朝","nodeType":"subsidiary","subType":"stake","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":"91120116697438888R"},{"id":"金涛8","label":"金涛","nodeType":"subsidiary","subType":"stake","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":"911201166974389250"},{"id":"宝龙金骏9","label":"宝龙金骏","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"金团10","label":"金团","nodeType":"subsidiary","subType":"stake","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":"911201166906610248"},{"id":"金策11","label":"金策","nodeType":"subsidiary","subType":"stake","income":"4595.58","ssqyshxydm":"911201166818665545","tyshxydm":"911201166906810688"},{"id":"金太12","label":"金太","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"配套10.9176991852573162","label":"配套","nodeType":"hexagon","children":[{"id":"新感知0","label":"新感知","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"新文科1","label":"新文科","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]}]},{"id":"金融1","label":"金融","nodeType":"bigIcon","children":[{"id":"投资00.013309690163548327","label":"投资","nodeType":"hexagon","children":[{"id":"中汽零0","label":"中汽零","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"国际资源1","label":"国际资源","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"农商行2","label":"农商行","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"京津金融3","label":"京津金融","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"中国金融租赁4","label":"中国金融租赁","nodeType":"subsidiary","subType":"stake","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"金融资产登记结算5","label":"金融资产登记结算","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"基管10.23038373304745785","label":"基管","nodeType":"hexagon","children":[{"id":"罗斯洛克基管0","label":"罗斯洛克基管","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"托马斯利基管1","label":"托马斯利基管","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"银河达华基管2","label":"银河达华基管","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"金融20.728576601980975","label":"金融","nodeType":"hexagon","children":[{"id":"商品交易集团0","label":"商品交易集团","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"投资服务中心1","label":"投资服务中心","nodeType":"subsidiary","subType":"clearing","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"基金30.5845930976462259","label":"基金","nodeType":"hexagon","children":[{"id":"托马斯利基金0","label":"托马斯利基金","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"罗斯洛克基金1","label":"罗斯洛克基金","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"规划0.5075061919415671","label":"规划","nodeType":"hexagon","children":[{"id":"银河达华基金00.2509500683655772","label":"银河达华基金","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""},{"id":"船舶基金10.2563728965404175","label":"船舶基金","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]}]}]},{"id":"商业2","label":"商业","nodeType":"bigIcon","children":[{"id":"服务00.8246767483971249","label":"服务","nodeType":"hexagon","children":[{"id":"规划0.10143362970948933","label":"规划","nodeType":"hexagon","children":[{"id":"低碳院00.47449605781833837","label":"低碳院","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"能源0.3575340746760747","label":"能源","nodeType":"hexagon","children":[{"id":"新苏能源投资00.4395884350086683","label":"新苏能源投资","nodeType":"subsidiary","subType":"stake","income":"1592.24","ssqyshxydm":"911201166818665545","tyshxydm":"911201185897730134"}]}]}]},{"id":"文旅3","label":"文旅","nodeType":"bigIcon","children":[{"id":"影视00.40024243990652186","label":"影视","nodeType":"hexagon","children":[{"id":"资产运营公司0","label":"资产运营公司","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]},{"id":"媒体10.43680952243936977","label":"媒体","nodeType":"hexagon","children":[{"id":"新金融文化传媒发展0","label":"新金融文化传媒发展","nodeType":"subsidiary","subType":"holding","income":0,"ssqyshxydm":"911201166818665545","tyshxydm":""}]}]}]}
+    const COLLAPSE_ICON = function COLLAPSE_ICON(x, y, r) {
+      return [
+        ['M', x - r, y - r],
+        ['a', r, r, 0, 1, 0, r * 2, 0],
+        ['a', r, r, 0, 1, 0, -r * 2, 0],
+        ['M', x + 4 - r, y - r],
+        ['L', x + r - 4, y - r],
+      ];
+    };
+    const EXPAND_ICON = function EXPAND_ICON(x, y, r) {
+      return [
+        ['M', x - r, y - r],
+        ['a', r, r, 0, 1, 0, r * 2, 0],
+        ['a', r, r, 0, 1, 0, -r * 2, 0],
+        ['M', x + 4 - r, y - r],
+        ['L', x + r - 4, y - r],
+        ['M', x, y - 2 * r + 4],
+        ['L', x, y - 4],
+      ];
+    };
+    const _initStructure = () => {
+ 
+    let bigIconArr = ['地产', '金融', '产业项目', '其他', '商业', '托管', '文旅'];
+    G6.registerNode(
+      'icon-node',
+      {
+        options: {
+          size: [60, 20],
+          stroke: '#91d5ff',
+          fill: '#91d5ff',
+        },
+        draw(cfg, group) {
+          const styles = this.getShapeStyle(cfg);
+          const { labelCfg = {} } = cfg;
+          const w = styles.width;
+          const h = styles.height;
+          const hasChildren = cfg.children && cfg.children.length > 0;
+          const keyShape = group.addShape('rect', {
+            attrs: {
+              ...styles,
+              x: -w / 2,
+              y: -h / 2,
+            },
+          });
+          if ('root' === cfg.nodeType) {
+            group.addShape("dom", {
+              attrs: {
+                ...styles,
+                width: 200,
+                height: 90,
+                x: -w / 2,
+                y: -h / 2,
+                fill: '#044081', // 911201166818665545
+                html: `<div onclick=fun(this) data = ${'911201166818665545'} style="cursor: pointer;height:90px;width:200px;padding-top:10px;padding-left:15px;padding-right:15px;background: #044081;font-size: 22px;color: #FFFFFF;text-align: center;">
+                ${cfg.label}
+               </div>`
+              },
+              draggable: true
+            });
+            group.addShape("marker", {
+              attrs: {
+                x: -108,
+                y: 0,
+                stroke: '#044081',
+                fill: '#044081',
+                symbol: function (x, y, r) {
+                  return [
+                    ['M', x, y - 4],
+                    ['L', x + 8, y],
+                    ['L', x, y + 4],
+                    ['Z']
+                  ]
+                }
+              }
+            });
+            return keyShape;
+          }
+          if ('investment' === cfg.nodeType) {
+            return group.addShape("dom", {
+              attrs: {
+                ...styles,
+                width: 120,
+                height: 60,
+                x: -w / 2,
+                y: -h / 2,
+                fill: '#044081',
+                html: `<div style="background: #044081;">
+                  <h6 style="width:100%;font-size: 14px;color: #FFFFFF;text-align: center;margin-bottom: 0;margin-top: 5px;">${cfg.label}</h6>
+                  <p style="font-size: 12px;color: #FFFFFF;text-align: center;margin-bottom: 0;">投资占比${cfg.proportion}%</p>
+                </div>`
+              },
+              draggable: true
+            });
+          }
+          if ('bigIcon' === cfg.nodeType) {
+            let iconPath = bigIconArr.indexOf(cfg.label) !== -1 ? cfg.label : '其他';
+            group.addShape('image', {
+              attrs: {
+                x: - w / 2,
+                y: - h / 2,
+                width: 120,
+                height: 120,
+                img: './images/' + iconPath + '.png',
+              },
+              name: 'image-shape',
+            });
+            group.addShape("dom", {
+              attrs: {
+                ...styles,
+                width: 120,
+                height: 120,
+                x: -w / 2,
+                y: -h / 2,
+                fill: '#044081',
+                html: `<div style="color: #044081;font-size: 20px;text-align: center;height:120px;line-height:160px;font-weight: 500;">${cfg.label}</div>`
+              },
+              draggable: true
+            });
+            group.addShape("marker", {
+              attrs: {
+                x: -68,
+                y: 0,
+                stroke: '#044081',
+                fill: '#044081',
+                symbol: function (x, y, r) {
+                  return [
+                    ['M', x, y - 4],
+                    ['L', x + 8, y],
+                    ['L', x, y + 4],
+                    ['Z']
+                  ]
+                }
+              }
+            });
+            if (hasChildren) {
+              group.addShape('marker', {
+                attrs: {
+                  x: 136 - w / 2,
+                  y: 72 - h / 2,
+                  r: 12,
+                  symbol: cfg.collapsed ? EXPAND_ICON : COLLAPSE_ICON,
+                  cursor: 'pointer',
+                  stroke: '#fff',
+                  fill: '#044081',
+                  lineWidth: 2,
+                },
+                name: 'collapse-icon',
+              });
+            }
+            return keyShape;
+          }
+          if ('hexagon' === cfg.nodeType) {
+            group.addShape("marker", {
+              attrs: {
+                x: -60,
+                y: 0,
+                r: 34,
+                stroke: '#044081',
+                fill: '#fff',
+                symbol: function (x, y, r) {
+                  return [
+                    ['M', x, y],
+                    ['L', x + r * 0.5, y - r * 0.9],
+                    ['L', x + r * 1.5, y - r * 0.9],
+                    ['L', x + r * 2, y],
+                    ['L', x + r * 1.5, y + r * 0.9],
+                    ['L', x + r * 0.5, y + r * 0.9],
+                    ['Z']
+                  ]
+                }
+              }
+            });
+            group.addShape("marker", {
+              attrs: {
+                x: -68,
+                y: 0,
+                stroke: '#044081',
+                fill: '#044081',
+                symbol: function (x, y, r) {
+                  return [
+                    ['M', x, y - 4],
+                    ['L', x + 8, y],
+                    ['L', x, y + 4],
+                    ['Z']
+                  ]
+                }
+              }
+            });
+            let domPaddingTop = cfg.label.length > 2 ? 0 : 10;
+            group.addShape("dom", {
+              attrs: {
+                ...styles,
+                width: 34,
+                height: 51,
+                x: -w / 2 - 9,
+                y: -h / 2 + 9,
+                // fill: '#044081',
+                html: `<div style="height:51px;width:34px;text-align: center;font-size: 17px;color: #044081;padding-top:${domPaddingTop}px">${cfg.label}</div>`
+              },
+              draggable: true
+            });
+            if (hasChildren) {
+              group.addShape('marker', {
+                attrs: {
+                  x: 60 - w / 2,
+                  y: 46 - h / 2,
+                  r: 12,
+                  symbol: cfg.collapsed ? EXPAND_ICON : COLLAPSE_ICON,
+                  cursor: 'pointer',
+                  stroke: '#fff',
+                  fill: '#044081',
+                  lineWidth: 2,
+                },
+                name: 'collapse-icon',
+              });
+
+            }
+            return keyShape;
+          }
+          if ('subsidiary' === cfg.nodeType) {
+
+            group.addShape("dom", {
+              attrs: {
+                ...styles,
+                width: 160,
+                height: 60,
+                x: -w / 2,
+                y: -h / 2,
+                html: `<div onclick=fun(this) data = ${cfg.tyshxydm ? cfg.tyshxydm : null} style="padding-left:10px;padding-top:5px;cursor: pointer;">
+                  <h6 style="width:100%;font-size: 14px;color: #000;text-align: left;margin-bottom: 7px;opacity: 0.8;">${cfg.label}</h6>
+                  <p style="font-size: 12px;opacity: 0.8;color: #000;text-align: left;margin-bottom: 0;">2020年收入${cfg.income}万元</p>
+                </div>`
+              },
+              name: 'subsidiary',
+            });
+            group.addShape("marker", {
+              attrs: {
+                x: -88,
+                y: 0,
+                stroke: '#044081',
+                fill: '#044081',
+                symbol: function (x, y, r) {
+                  return [
+                    ['M', x, y - 4],
+                    ['L', x + 8, y],
+                    ['L', x, y + 4],
+                    ['Z']
+                  ]
+                }
+              }
+            });
+            return keyShape;
+          }
+          if (cfg.label && 'investment' !== cfg.nodeType) {
+            group.addShape('text', {
+              attrs: {
+                ...labelCfg.style,
+                text: cfg.label,
+                fill: '#fff',
+                x: 50 - w / 2,
+                y: 25 - h / 2,
+              },
+            });
+          }
+
+          return keyShape;
+        },
+        update: (cfg, item) => { 
+          const group = item.getContainer();
+          const icon = group.find((e) => e.get('name') === 'collapse-icon');
+          icon.attr('symbol', cfg.collapsed ? EXPAND_ICON : COLLAPSE_ICON);
+        }
+      },
+      'rect',
+    );
+    G6.registerEdge('flow-line', {
+      draw(cfg, group) {
+        const startPoint = cfg.startPoint;
+        const endPoint = cfg.endPoint;
+        const { style } = cfg;
+        let defaultPathConfig = [
+          ['M', startPoint.x, startPoint.y],
+          ['L', (startPoint.x + endPoint.x) / 2, (startPoint.y)],
+          ['L', (startPoint.x + endPoint.x) / 2, (endPoint.y)],
+          ['L', endPoint.x, endPoint.y]
+        ];
+        const shape = group.addShape('path', {
+          attrs: {
+            stroke: style.stroke,
+            endArrow: 'investment' === cfg.targetNode._cfg.model.nodeType ? '' : style.endArrow,
+            path: defaultPathConfig,
+          },
+        });
+
+        return shape;
+      },
+    });
+    const defaultStateStyles = {
+      hover: {
+        stroke: '#1890ff',
+        lineWidth: 2,
+      },
+    };
+
+    const defaultNodeStyle = {
+      fill: '#044081',
+      stroke: '#044081',
+    };
+
+    const defaultEdgeStyle = {
+      stroke: '#044081',
+      endArrow: {
+        path: 'M -8,-4 L -8,4 L 0,0 Z',
+        fill: '#044081',
+        stroke: '#f00',
+        opacity: 1,
+        d: 60,
+      },
+    };
+    const defaultLayout = {
+      type: 'mindmap',
+      center: [200, 200],
+      direction: 'H',
+      getId: function getId(d) {
+        return d.id;
+      },
+      getHeight: function getHeight() {
+        return 16;
+      },
+      getWidth: function getWidth() {
+        return 16;
+      },
+      getVGap: function getVGap() {
+        return 55;
+      },
+      getHGap: function getHGap() {
+        return 130;
+      },
+      getSide: function getSide(d) {
+        if (d.data.nodeType === 'investment') {
+          return 'left'
+        }
+        return 'right'
+      }
+    };
+    const defaultLabelCfg = {
+      "position": "center",
+      "style": {
+        "textAlign": "center",
+        "fontStyle": "normal"
+      }
+    };
+    const container = document.getElementById('mountNode');
+    const width = container.scrollWidth;
+    const height = container.scrollHeight || 800;
+
+    const minimap = new G6.Minimap({
+      size: [150, 100],
+    });
+    const graph = new G6.TreeGraph({
+      container: container,
+      width: width,
+      height: height,
+      linkCenter: true,
+      // plugins: [minimap],
+      modes: {
+        default: [{
+          type: 'collapse-expand',
+          onChange: function onChange(item, collapsed) {
+            const data = item.get('model');
+            graph.updateItem(item, {
+              collapsed,
+            });
+            data.collapsed = collapsed;
+            return true;
+          },
+        }, 'drag-canvas', 'zoom-canvas'],
+      },
+      renderer: "svg",
+      fitCenter: true,
+      defaultNode: {
+        type: 'icon-node',
+        size: [120, 50],
+        style: defaultNodeStyle,
+        labelCfg: defaultLabelCfg,
+      },
+      defaultEdge: {
+        // shape: 'cubic-horizontal',
+        // type: 'cubic-horizontal',
+        type: 'flow-line',
+        style: defaultEdgeStyle,
+      },
+      nodeStateStyles: defaultStateStyles,
+      edgeStateStyles: defaultStateStyles,
+      layout: defaultLayout,
+    });
+
+    graph.node((node) => {
+      if (node.nodeType === 'root') {
+        return {
+          id: node.id,
+          size: [200, 90]
+        };
+      }
+      if ('bigIcon' === node.nodeType) {
+        return {
+          id: node.id,
+          size: [120, 120],
+          style: {
+            fill: '#fff',
+            stroke: null
+          }
+        };
+      }
+      if ('hexagon' === node.nodeType) {
+        return {
+          id: node.id,
+          size: [69, 69],
+          style: {
+            fill: null,
+            stroke: null
+          }
+        };
+      }
+      if ('subsidiary' === node.nodeType) {
+        let color = node.subType === 'holding' ? '#B3D7B8' : node.subType === 'clearing' ? ' #E5E5E5' : '#CDD9E6';
+        return {
+          id: node.id,
+          size: [160, 60],
+          style: {
+            fill: color,
+            stroke: null
+          }
+        };
+      }
+      return {
+        id: node.id,
+        size: [120, 50]
+      }
+    });
+    graph.data(frameWorkData);
+    graph.render();
+    graph.zoom(0.6);
+    graph.translate(width / 2, height / 2);
+    // graph.fitView();
+
+    window.fun = function (e) {
+
+     
+    }
+
+    if (typeof window !== 'undefined') {
+
+      window.onresize = () => {
+        if (!graph || graph.get('destroyed')) return;
+        if (!container || !container.scrollWidth || !container.scrollHeight) return;
+        graph.changeSize(container.scrollWidth, container.scrollHeight);
+      };
+    }
+  }
+  _initStructure();
+  </script>
 </body>
 </html>
